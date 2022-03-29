@@ -1,0 +1,63 @@
+﻿@model WebApplication1.Models.Ad_login
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+
+</div>
+
+<div class = "row">
+    <div class = "col-sm-4"></div>
+    <div class = "col-sm-4">
+        <form class ="form-horizontal" asp-action = "Index">
+        <div class="form-group">
+            <label class="control-label">Admin ID</label>
+            <input asp-for="Admin_Id" class ="form-control" type ="text" />
+        </div>
+        &nbsp
+         <div class="form-group">
+            <label class="control-label">Password</label>
+            <input asp-for="Ad_Password" class ="form-control" type ="password" />
+        </div>
+        &nbsp
+        <div class ="form-group" >
+            <input type="submit" value="submit"/>
+        </div>
+        </form>
+        &nbsp
+    </div>
+</div>
+
+
+@*<div class="row">
+    <div class="col-md-6 offset-md-3">
+        <div class="card login-logout-tab">
+            <ul class = "nav nav-tabs card-header-tabs">
+                <li class="nav-items">
+                    <a class="nav-link" href='/Identity/Account/Login'>Sign In</a>
+                </li>
+                <li class="nav-items">
+                    <a class="nav-link" href='/Identity/Account/Register'>Register</a>
+                </li>
+            </ul>
+        </div>
+         <div class="card-content">
+             <div class = "row">
+               
+                 </div>
+             </div>
+        </div>
+    </div>
+
+</div>*@
+@{
+    if(TempData["msg"]!=null)
+    {
+        <script>
+            alert('@TempData["msg"]')
+        </script>
+        
+    }
+}
